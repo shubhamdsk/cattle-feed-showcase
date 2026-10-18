@@ -6,7 +6,7 @@
 Built for real daily shop operations — write a bill, reduce stock in the same step, take payments, and review the day from phone or desktop.
 
 <p>
-  <img src="https://img.shields.io/badge/Status-Production_(Private)-16a34a?style=for-the-badge" alt="Production" />
+  <img src="https://img.shields.io/badge/Source-Private-16a34a?style=for-the-badge" alt="Source: private" />
   <a href="https://software-studio.nexoralab.workers.dev/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Built_By-Nexora_Studio-0f172a?style=for-the-badge" alt="Nexora Studio" />
   </a>
@@ -29,12 +29,13 @@ Built for real daily shop operations — write a bill, reduce stock in the same 
 
 > **🔒 Intellectual Property Notice**  
 > This repository is a **public case study & architecture showcase**.  
+> It does **not** contain the application source code, and the project is **not open source**.  
 > The full application source is maintained in a private repository by **[Nexora Studio](https://software-studio.nexoralab.workers.dev/)**.  
 > Customer names and mobile numbers in the screenshots are masked.
 
 ---
 
-## 🏪 Storefront Overview
+## 🏪 Overview
 
 The shop sells cattle feed at the counter. Every sale must:
 
@@ -52,7 +53,7 @@ The application is the digital counter desk — usable on phone (bottom navigati
 ### 1. 🧾 Counter Billing with Stock Guard
 - Search products → see rate, units in stock and low-stock mark before adding a line  
 - Quantity + optional one-off rate per line  
-- Save refuses the line if stock is insufficient  
+- Save is refused, naming each product that is short, if stock is insufficient  
 - One transaction updates bill + stock + payment status together  
 
 ### 2. 📦 Live Stock & Low-Stock Alerts
@@ -93,9 +94,9 @@ Phone layout (light theme). Supports light / dark / system.
 ### Billing
 Product search with stock levels → filled bill → Marathi print / WhatsApp preview.
 
-| New Bill | Filled Bill | Print Preview |
-|:---:|:---:|:---:|
-| <img src="assets/screenshots/02-new-bill.webp" width="100%" /> | <img src="assets/screenshots/03-bill-filled.webp" width="100%" /> | <img src="assets/screenshots/04-bill-print.webp" width="100%" /> |
+<img src="assets/screenshots/02-new-bill.webp" alt="New bill with product search, stock levels and low-stock marks" width="100%" />
+<img src="assets/screenshots/03-bill-filled.webp" alt="Bill with two product lines, quantities and rates" width="100%" />
+<img src="assets/screenshots/04-bill-print.webp" alt="Marathi bill print preview with print and WhatsApp actions" width="100%" />
 
 ### Stock & Sales
 <img src="assets/screenshots/05-stock.webp" alt="Stock list" width="100%" />
