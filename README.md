@@ -87,9 +87,7 @@ Day’s sales, bill count, stock on hand and low-stock count.
 
 <img src="assets/screenshots/01-dashboard.webp" alt="Dashboard" width="100%" />
 
-Phone layout (light theme). Supports light / dark / system.
-
-<img src="assets/screenshots/10-mobile.webp" alt="Mobile dashboard" width="320" />
+On a phone the same screens use bottom navigation. Supports light / dark / system themes.
 
 ### Billing
 Product search with stock levels → filled bill → Marathi print / WhatsApp preview.
