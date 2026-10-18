@@ -1,141 +1,162 @@
 <div align="center">
 
-# Cattle Feed Billing
+# 🐄 Cattle Feed Billing — श्री गणेश ट्रेडर्स
 
-**Counter billing, stock and sales reports for श्री गणेश ट्रेडर्स (Shree Ganesh Traders), a cattle feed dealer.**
+**Counter billing, live stock, payments & sales reports for a cattle-feed dealer.**  
+Built for real daily shop operations — write a bill, reduce stock in the same step, take payments, and review the day from phone or desktop.
 
-<img src="assets/screenshots/01-dashboard.webp" alt="Dashboard showing the day's sales, bill count, stock on hand and low stock" width="100%" />
+<p>
+  <img src="https://img.shields.io/badge/Status-Production_(Private)-16a34a?style=for-the-badge" alt="Production" />
+  <a href="https://software-studio.nexoralab.workers.dev/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Built_By-Nexora_Studio-0f172a?style=for-the-badge" alt="Nexora Studio" />
+  </a>
+</p>
 
-<img src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
-<img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-<img src="https://img.shields.io/badge/PostgreSQL_(Neon)-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+<p>
+  <img src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/PostgreSQL_(Neon)-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
+
+<img src="assets/screenshots/01-dashboard.webp" alt="Dashboard — today's sales, bill count, stock & low-stock alerts" width="100%" />
 
 </div>
 
 ---
 
-> This repository is a **public project showcase**. It does not contain the application source code, and the source is not open source. The application is maintained in a private repository.
-
-Customer names and mobile numbers in the screenshots below are masked. The shop name, products and on-screen figures are from the working application.
+> **🔒 Intellectual Property Notice**  
+> This repository is a **public case study & architecture showcase**.  
+> The full application source is maintained in a private repository by **[Nexora Studio](https://software-studio.nexoralab.workers.dev/)**.  
+> Customer names and mobile numbers in the screenshots are masked.
 
 ---
 
-## Overview
+## 🏪 Storefront Overview
 
-The shop sells cattle feed at the counter. A sale has to produce a bill the customer can take away and reduce the bags left in stock at the same time. The owner also needs low-stock warnings, a record of what is still owed, and a report that opens in Excel.
+The shop sells cattle feed at the counter. Every sale must:
 
-The application is the counter desk: write a bill, keep stock honest, take a payment, and review the day from a phone or a larger screen. Shop screens require a sign-in. Each bill records who wrote it.
+- Produce a printable / WhatsApp-ready Marathi bill  
+- Reduce stock in the same atomic step  
+- Track partial or pending payments  
+- Surface low-stock warnings and period reports  
 
-## Key features
+The application is the digital counter desk — usable on phone (bottom navigation) or larger screens (sidebar). Shop screens require sign-in; every bill records who wrote it.
 
-- **Bills at the counter.** Customer, mobile number, who billed, and the product lines. A line is refused when there is not enough stock.
-- **Stock that moves with the sale.** Add a product, restock it, or edit its rate and minimum. Saving a bill reduces the quantity in the same step.
-- **Low stock.** Products under their minimum are marked on the dashboard, in product search, and on a filter in the stock list.
-- **Customers by mobile number.** The number matches the customer, so a later visit can bring back their name, earlier bills and what is still owed.
-- **Payments.** A bill can be paid, partly paid or still pending, in cash or online. A later payment is recorded against that customer.
-- **Print and WhatsApp.** The bill prints in Marathi. The shop can send a PDF and a private link, which the customer opens without an account.
-- **Sales records.** Bills for a chosen period, newest first, with the period total and a search by bill number or customer.
-- **Reports.** Filter by period, product, customer or who billed. Charts on the page, and the same period downloaded as an Excel workbook.
+---
 
-A rate typed on a bill applies to that bill only. It does not change the product's usual price.
+## 🚀 Key Features Engineered
 
-The Payments screen is part of the application. A screenshot of it was not available for this showcase.
+### 1. 🧾 Counter Billing with Stock Guard
+- Search products → see rate, units in stock and low-stock mark before adding a line  
+- Quantity + optional one-off rate per line  
+- Save refuses the line if stock is insufficient  
+- One transaction updates bill + stock + payment status together  
 
-## Screenshot gallery
+### 2. 📦 Live Stock & Low-Stock Alerts
+- Add / restock / edit rate & minimum  
+- Products under minimum highlighted on Dashboard, product search and Stock list  
+
+### 3. 👥 Customer Lookup by Mobile
+- Mobile number is the unique key  
+- Later visits bring back name, previous bills and outstanding dues  
+
+### 4. 💰 Payments
+- Bill can be Paid / Partly paid / Pending (cash or online)  
+- Later payments recorded against the customer  
+
+### 5. 🖨️ Print & WhatsApp
+- Marathi bill layout for the counter  
+- PDF + private shareable link (customer needs no account)  
+
+### 6. 📊 Sales & Reports
+- Period filter, newest-first list, period total  
+- Charts (trend, product share, top customers, billers)  
+- Busy-hours heatmap  
+- Excel download of the filtered period (summary, products, customers, bills & lines, low stock, etc.)
+
+---
+
+## 📸 Screenshot Gallery
 
 ### Dashboard
+Day’s sales, bill count, stock on hand and low-stock count.
 
-The day's sales, bill count, stock on hand and how many products are under the minimum.
+<img src="assets/screenshots/01-dashboard.webp" alt="Dashboard" width="100%" />
 
-<img src="assets/screenshots/01-dashboard.webp" alt="Dashboard for the trading day" width="100%" />
+Phone layout (light theme). Supports light / dark / system.
 
-The same day on a phone, in the light theme. The larger screen uses a sidebar. The shop can follow light, dark or the system appearance.
-
-<img src="assets/screenshots/10-mobile.webp" alt="Phone layout of the dashboard in the light theme" width="320" />
+<img src="assets/screenshots/10-mobile.webp" alt="Mobile dashboard" width="320" />
 
 ### Billing
+Product search with stock levels → filled bill → Marathi print / WhatsApp preview.
 
-Product search shows the rate, the units in stock and a low-stock mark before a line is added.
+| New Bill | Filled Bill | Print Preview |
+|:---:|:---:|:---:|
+| <img src="assets/screenshots/02-new-bill.webp" width="100%" /> | <img src="assets/screenshots/03-bill-filled.webp" width="100%" /> | <img src="assets/screenshots/04-bill-print.webp" width="100%" /> |
 
-<img src="assets/screenshots/02-new-bill.webp" alt="New bill with product search and stock levels" width="100%" />
-
-Two lines on a bill. Quantity and rate are set per line, and the amount is calculated before the bill is saved.
-
-<img src="assets/screenshots/03-bill-filled.webp" alt="Bill with two product lines, quantities and rates" width="100%" />
-
-A Marathi bill, ready to print or to send as a PDF on WhatsApp.
-
-<img src="assets/screenshots/04-bill-print.webp" alt="Print preview of a Marathi bill with print and WhatsApp actions" width="100%" />
-
-### Stock
-
-Each product has a selling rate, the quantity on hand and a minimum. A row can be restocked, edited or removed.
-
-<img src="assets/screenshots/05-stock.webp" alt="Stock list with rates, quantities, minimums and low-stock marks" width="100%" />
-
-### Sales
-
-Bills for the chosen period, newest first, with the period total.
-
-<img src="assets/screenshots/06-sales.webp" alt="Sales records for a day with the total and bill list" width="100%" />
+### Stock & Sales
+<img src="assets/screenshots/05-stock.webp" alt="Stock list" width="100%" />
+<img src="assets/screenshots/06-sales.webp" alt="Sales records" width="100%" />
 
 ### Reports
+Summary vs previous period, charts and detailed tables.
 
-A month's summary set beside the previous period, with the sales trend.
+<img src="assets/screenshots/07-reports.webp" alt="Reports summary" width="100%" />
+<img src="assets/screenshots/08-reports-charts.webp" alt="Report charts" width="100%" />
+<img src="assets/screenshots/09-reports-tables.webp" alt="Busy hours & product table" width="100%" />
 
-<img src="assets/screenshots/07-reports.webp" alt="Reports summary with sales figures and a sales trend" width="100%" />
+---
 
-Units sold, share of sales, the largest customers and who wrote the bills. Names on the customer chart are replaced with C1 to C5.
+## 🏗️ System Architecture
 
-<img src="assets/screenshots/08-reports-charts.webp" alt="Report charts for products, sales share, customers and billers" width="100%" />
+```mermaid
+flowchart LR
+    A[Shop Staff / Owner<br/>Phone or Desktop] -->|Session Auth| B[Next.js App on Vercel]
+    B -->|Route Handlers| C[PostgreSQL on Neon]
+    B -->|ApexCharts| D[Reports UI]
+    B -->|ExcelJS / jsPDF| E[Excel & Bill PDF]
+    B -->|WhatsApp share| F[Customer PDF link]
+```
 
-Busy hours across the week, and each product's units, average rate, sales and share.
+---
 
-<img src="assets/screenshots/09-reports-tables.webp" alt="Busy-hours heatmap and product performance table" width="100%" />
+## ⚡ Technical Highlights
 
-## Technology
-
-| Area | What it uses |
-| --- | --- |
-| Interface | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
-| API | Next.js route handlers in the same project |
-| Database | PostgreSQL on Neon |
-| Sign-in | Shop account, session cookie, hashed passwords, a limit on failed attempts |
-| Charts, files | ApexCharts on the reports page, ExcelJS for the workbook, jsPDF for the bill PDF |
+| Area | Stack |
+|------|--------|
+| Interface | Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 |
+| API | Next.js Route Handlers (same project) |
+| Database | Neon PostgreSQL |
+| Auth | Shop account · session cookie · hashed passwords · failed-attempt limit |
+| Charts & Files | ApexCharts · ExcelJS · jsPDF |
 | Hosting | Vercel |
 
-No other services are part of this project.
+- Atomic bill + stock update (quantity check + write in one step)  
+- Customer identity by mobile number  
+- Period-over-period report comparison  
+- Full Marathi bill layout  
+- Responsive: bottom nav on phone, sidebar on larger screens  
 
-## Workflows
+---
 
-1. Sign in. Shop screens stay behind the account.
-2. Read Today: sales, bills, stock on hand and anything under its minimum.
-3. Write a bill. Search a product, set the quantity and, if needed, a rate for this bill. Mark it paid, partly paid or pending.
-4. Save. The bill, any payment taken now, and the new stock quantities are stored together. A product that drops under its minimum is called out.
-5. Print the Marathi bill, or send a PDF and a private link on WhatsApp.
-6. Restock from the stock list, look up a period in Sales, record a later payment, and download the report.
+## 🔄 Typical Daily Workflow
 
-The Excel file follows the filters on the reports page: summary, sales over the period, products, who billed, customers, bills and their lines, busy hours, and products that are low.
+1. Sign in  
+2. Glance at **Today** (sales, bills, stock, low-stock)  
+3. Write bill → search product → set qty / rate → mark payment status  
+4. Save → bill + stock + payment stored together  
+5. Print Marathi bill or send PDF + private link on WhatsApp  
+6. Restock, record later payments, review Sales / download Excel report  
 
-## Highlights
+---
 
-- One save updates the bill and the stock together, after checking that the quantity is available.
-- The customer's mobile number is how the shop finds their earlier bills and dues.
-- Reports compare the chosen period with the one before it.
-- The printed bill is laid out in Marathi for the counter.
-- The layout is usable on a phone, with the main sections along the bottom.
+## 📬 Architected & Delivered By
 
-## Privacy
+**Shubham Deshmukh** — Founder & Lead Developer at **[Nexora Studio](https://software-studio.nexoralab.workers.dev/)**
 
-This repository only presents the project. It does not include the application source, environment files, database access, or customer records. Do not treat it as an open-source release of the application.
-
-## Contact
-
-**Shubham Deshmukh**
-
-- Studio: [software-studio.nexoralab.workers.dev](https://software-studio.nexoralab.workers.dev/)
-- LinkedIn: [shubham-deshmukh1720](https://www.linkedin.com/in/shubham-deshmukh1720)
-- GitHub: [@shubhamdsk](https://github.com/shubhamdsk)
+- 🌐 Studio: [software-studio.nexoralab.workers.dev](https://software-studio.nexoralab.workers.dev/)  
+- 💼 LinkedIn: [shubham-deshmukh1720](https://www.linkedin.com/in/shubham-deshmukh1720)  
+- 💻 GitHub: [@shubhamdsk](https://github.com/shubhamdsk)
